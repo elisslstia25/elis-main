@@ -6,10 +6,10 @@
                 <div class="card-header">
                     <h3 class="card-title">
                         <i class="fas fa-edit"></i>
-                        Form Usulan Penelitian
+                        Form Usulan Pengabdian
                     </h3>
                 </div>
-                <form action="{{ url('dosen/penelitian') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('dosen/pengabdian') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                 <div class="card-body">
                     <div class="row">
@@ -88,10 +88,10 @@
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label>Judul Penelitian</label>
+                                                            <label>Judul Pengabdian</label>
                                                             <input type="text" class="form-control"
                                                                 name="judul_penelitian"
-                                                                value="{{ Auth::guard('dosen')->user()->judul_penelitian }}">
+                                                                value="{{ Auth::guard('dosen')->user()->judul_pengabdian }}">
                                                         </div>
                                                     </div>
 
@@ -238,7 +238,7 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label>Bidang Keahlian</label>
+                                                        <label>Bidang Keahlian 2</label>
                                                         <input type="text" class="form-control"
                                                             name="bidang_keahlian2"
                                                             value="{{ Auth::guard('dosen')->user()->bidang_keahlian2 }}">
@@ -246,35 +246,48 @@
 
 
                                                     <div class="form-group">
-                                                        <label>Peran</label>
+                                                        <label>Peran 2</label>
                                                         <input type="text" class="form-control" name="peran2"
                                                             value="{{ Auth::guard('dosen')->user()->peran2 }}">
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label>Tugas Penelitian</label>
+                                                        <label>Tugas Pengabdian 2</label>
                                                         <input type="text" class="form-control"
                                                             name="tugas_penelitian2"
                                                             value="{{ Auth::guard('dosen')->user()->tugas_penelitian2 }}">
                                                     </div>
 
-                                                    <div class="form-group">
-                                                        <label>Dokumen</label>
-                                                        <input type="file" class="form-control" name="dokumen"
-                                                            value="{{ Auth::guard('dosen')->user()->dokumen }}" accept="application/pdf">
-                                                    </div>
+                                                    <div class="form-group row" style="margin-bottom: 0px;">
+                                                            <div class="col-lg-12">
+                                                                <label>Dokumen Proposal</label>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <a href="path_ke_file/dokumen_proposal.pdf" download>
+                                                                    <button type="button" class="btn btn-primary">Download</button>
+                                                                </a>
+                                                                <p style="color: red; font-size: 12px">*Download format diatas</p>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <input type="file" class="form-control" name="dokumen" value="{{ Auth::guard('dosen')->user()->dokumen }}" accept="application/pdf">
+                                                            </div>
+                                                        </div>
 
-                                                    <div class="form-group">
-                                                        <label>Dokumen 2</label>
-                                                        <input type="file" class="form-control" name="dokumen2"
-                                                            value="{{ Auth::guard('dosen')->user()->dokumen2 }}" accept="application/pdf">
-                                                    </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-lg-12">
+                                                                <label>Dokumen RAB</label>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <a href="path_ke_file/dokumen_rab.xls" download>
+                                                                    <button type="button" class="btn btn-primary">Download</button>
+                                                                </a>
+                                                                <p style="color: red; font-size: 12px">*Download format diatas</p>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <input type="file" class="form-control" name="dokumen2" value="{{ Auth::guard('dosen')->user()->dokumen2 }}" accept="application/xls">
+                                                            </div>
+                                                        </div>
 
-                                                    <div class="form-group">
-                                                        <label>Dokumen 3</label>
-                                                        <input type="file" class="form-control" name="dokumen3"
-                                                            value="{{ Auth::guard('dosen')->user()->dokumen3 }}" accept="application/pdf">
-                                                    </div>
                                                 </div>
 
                                                 <div class="col-md-6">
@@ -313,7 +326,7 @@
                                                     </div>
 
                                                     <div class="footer" style="margin-top: 10%">
-                                                        <button type="submit" class="btn btn-info float-center"><span class="fa fa-arrow-left"></span> Kembali</button>
+                                                        <!-- <button type="submit" class="btn btn-info float-center"><span class="fa fa-arrow-left"></span> Kembali</button> -->
                                                         <button type="submit" class="btn btn-default float-right"><span class="fa fa-save"></span> Simpan</button>
                                                       </div>
                                                 </div>

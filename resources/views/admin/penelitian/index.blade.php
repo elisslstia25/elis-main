@@ -29,7 +29,8 @@
                                     <td>{{ $no++ }}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="{{ url('admin/penelitian/berjalan', $penelitian->id) }}" class="btn btn-info"><i class="fas fa-eye"></i> Lihat</a>
+                                            <a href="{{ url('admin/penelitian', $penelitian->id) }}" class="btn btn-info">
+                                                <i class="fas fa-eye"></i> Lihat</a>
                                         </div>
                                     </td>
                                     <td>
@@ -49,24 +50,5 @@
         </div>
     </div>
 
-
-    <!-- <div class="container">
-        <div class="card mt-3 pt-3">
-            <div class="card-body">
-                <div class="card">
-                    <div class="card-header bg-primary">
-                        <div class="card-title">
-                            <h4>Data Penelitan Usulan Baru</h4>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="container">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
 </x-app>

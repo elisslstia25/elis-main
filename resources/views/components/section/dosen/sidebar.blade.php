@@ -70,7 +70,7 @@
                     <li class="nav-item">
                         <a href="{{url('dosen/penelitian-riwayat')}}" class="nav-link">
                             <i class="far fa-circle nav-icon" style="color: white"></i>
-                            <p style="color: white">Riwayat Usulan</p>
+                            <p style="color: white">Riwayat Penelitian</p>
                         </a>
                     </li>
                 </ul>
@@ -85,13 +85,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{ url('dosen/pengabdian-berjalan') }}" class="nav-link">
+                        <a href="{{ url('dosen/pengabdian') }}" class="nav-link">
                             <i class="far fa-circle nav-icon" style="color: white"></i>
                             <p style="color: white">Usulan Baru</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('dosen/pengabdian-aktif') }}" class="nav-link">
+                        <a href="{{ url('dosen/pengabdian-berjalan') }}" class="nav-link">
                             <i class="far fa-circle nav-icon" style="color: white"></i>
                             <p style="color: white">Pengabdian Aktif</p>
                         </a>
@@ -105,7 +105,7 @@
                     <li class="nav-item">
                         <a href="{{ url('dosen/pengabdian-riwayat') }}" class="nav-link">
                             <i class="far fa-circle nav-icon" style="color: white"></i>
-                            <p style="color: white">Riwayat Selesai</p>
+                            <p style="color: white">Riwayat Pengabdian</p>
                         </a>
                     </li>
                 </ul>

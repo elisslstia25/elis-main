@@ -37,8 +37,6 @@
                                                 <div class="btn-group">
                                                     <x-button.info-button url="dosen/penelitian"
                                                         id="{{ $penelitian->id }}" />
-                                                    <x-button.edit-button url="dosen/penelitian"
-                                                        id="{{ $penelitian->id }}" />
                                                     <x-button.delete-button url="dosen/penelitian"
                                                         id="{{ $penelitian->id }}" />
                                                 </div>

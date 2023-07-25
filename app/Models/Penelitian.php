@@ -16,11 +16,11 @@ class Penelitian extends Model
         return $this->belongsTo(Pegawai::class, 'id_pegawai');
     }
 
-    function handleUploadDokumen1()
+    function handleUploadDokumen()
     {
         if (request()->hasFile('dokumen')) {
             $dokumen = request()->file('dokumen');
-            $destination = "penelitian/dokumen-1";
+            $destination = "penelitian/dokumen";
             $randomStr = Str::random(5);
             $filename = time() . "-"  . $randomStr . "."  . $dokumen->extension();
             $url = $dokumen->storeAs($destination, $filename);
@@ -29,11 +29,24 @@ class Penelitian extends Model
         }
     }
 
+    // function handleUploadDokumen1()
+    // {
+    //     if (request()->hasFile('dokumen')) {
+    //         $dokumen = request()->file('dokumen');
+    //         $destination = "penelitian/dokumen-1";
+    //         $randomStr = Str::random(5);
+    //         $filename = time() . "-"  . $randomStr . "."  . $dokumen->extension();
+    //         $url = $dokumen->storeAs($destination, $filename);
+    //         $this->dokumen = "app/" . $url;
+            
+    //     }
+    // }
+
     function handleUploadDokumen2()
     {
         if (request()->hasFile('dokumen2')) {
             $dokumen2 = request()->file('dokumen2');
-            $destination = "penelitian/dokumen-3";
+            $destination = "penelitian/dokumen-2";
             $randomStr = Str::random(5);
             $filename = time() . "-"  . $randomStr . "."  . $dokumen2->extension();
             $url = $dokumen2->storeAs($destination, $filename);

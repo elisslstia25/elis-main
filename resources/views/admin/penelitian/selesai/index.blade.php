@@ -24,12 +24,12 @@
                             @endphp
                             <tbody>
                                 @foreach ($list_selesai as $penelitian)
-                                @if ($penelitian->status == 2)
+                                @if ($penelitian->status === 2)
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="{{ url('admin/selesai', $penelitian) }}" class="btn btn-info">
+                                            <a href="{{ url('admin/selesai', $penelitian->id) }}" class="btn btn-info">
                                                 <i class="fas fa-eye"></i> Lihat</a>
                                         </div>
                                     </td>

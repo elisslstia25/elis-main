@@ -7,8 +7,8 @@
                 <div class="card">
                     <div class="card-header">
 
-                        <h4 class="card-title"> Data Usulan Baru Pengabdian</h4>
-                        <a href="{{ url('dosen/penelitian/create') }}" class="btn btn-primary float-right"><i
+                        <h1 class="card-title"> Data Usulan Baru Pengabdian</h1>
+                        <a href="{{ url('dosen/pengabdian/create') }}" class="btn btn-primary float-right"><i
                                 class="fa fa-plus"></i> Tambah
                             Pengabdian</a>
 
@@ -29,26 +29,26 @@
                                 $no = 1;
                             @endphp
                             <tbody>
-                                @foreach ($list_penelitian as $penelitian)
-                                    @if ($penelitian->status == 1)
+                                @foreach ($list_pengabdian as $pengabdian)
+                                    @if ($pengabdian->status == 1)
                                         <tr>
                                             <td>{{ $no++ }}</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <x-button.info-button url="dosen/penelitian"
-                                                        id="{{ $penelitian->id }}" />
-                                                    <x-button.edit-button url="dosen/penelitian"
-                                                        id="{{ $penelitian->id }}" />
-                                                    <x-button.delete-button url="dosen/penelitian"
-                                                        id="{{ $penelitian->id }}" />
+                                                    <x-button.info-button url="dosen/pengabdian"
+                                                        id="{{ $pengabdian->id }}" />
+                                                    <x-button.edit-button url="dosen/pengabdian"
+                                                        id="{{ $pengabdian->id }}" />
+                                                    <x-button.delete-button url="dosen/pengabdian"
+                                                        id="{{ $pengabdian->id }}" />
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="btn btn-warning" for="">Belum Di Danai</div>
                                             </td>
-                                            <td>{{ $penelitian->pegawai->nama }}</td>
-                                            <td>{{ $penelitian->judul_penelitian }}</td>
-                                            <td>{{ $penelitian->created_at }}</td>
+                                            <td>{{ $pengabdian->pegawai->nama }}</td>
+                                            <td>{{ $pengabdian->judul_pengabdian }}</td>
+                                            <td>{{ $pengabdian->created_at }}</td>
                                         </tr>
                                     @endif
                                 @endforeach

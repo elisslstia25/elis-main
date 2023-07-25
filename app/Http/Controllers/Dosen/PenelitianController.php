@@ -62,7 +62,7 @@ class PenelitianController extends Controller
         $penelitian->bidang_mitra           = request('bidang_mitra');
         $penelitian->alamat_mitra           = request('alamat_mitra');
 
-        $penelitian->handleUploadDokumen1();
+        $penelitian->handleUploadDokumen();
         $penelitian->handleUploadDokumen2();
         $penelitian->handleUploadDokumen3();
         $penelitian->handleUploadDokumenMitra();

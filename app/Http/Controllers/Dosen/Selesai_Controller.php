@@ -3,18 +3,18 @@
 namespace App\Http\Controllers\Dosen;
 
 use App\Http\Controllers\Controller;
-use App\Models\Penelitian;
+use App\Models\Pengabdian;
 use Illuminate\Http\Request;
 
-class BerjalanController extends Controller
+class Selesai_Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data['list_penelitian'] = Penelitian::where('status', '2')->get();
-        return view('dosen.penelitian.berjalan.index', $data);
+        $data['list_pengabdian'] = Pengabdian::where('status', '2')->get();
+        return view('dosen.pengabdian.selesai.index', $data);
     }
 
     /**
@@ -36,11 +36,9 @@ class BerjalanController extends Controller
     /**
      * Display the specified resource.
      */
-
-     public function show(Penelitian $penelitian)
+    public function show(string $id)
     {
-       $data['penelitian'] = $penelitian;
-       return view('dosen.penelitian.berjalan.show', $data);
+        //
     }
 
     /**

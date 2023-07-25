@@ -11,34 +11,22 @@
                     <div class="card-header p-0 pt-1">
                         <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill"
-                                    href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home"
-                                    aria-selected="true"> Identitas</a>
+                                <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true"> Identitas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill"
-                                    href="#custom-tabs-one-profile" role="tab"
-                                    aria-controls="custom-tabs-one-profile" aria-selected="false">Proposal & RAB</a>
+                                <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Proposal & RAB</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill"
-                                    href="#custom-tabs-one-messages" role="tab"
-                                    aria-controls="custom-tabs-one-messages" aria-selected="false">Luaran & Capaian</a>
+                                <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">Luaran & Capaian</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill"
-                                    href="#custom-tabs-two-profile" role="tab"
-                                    aria-controls="custom-tabs-two-profile" aria-selected="false">Laporan Kemajuan</a>
+                                <a class="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill" href="#custom-tabs-two-profile" role="tab" aria-controls="custom-tabs-two-profile" aria-selected="false">Laporan Kemajuan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill"
-                                    href="#custom-tabs-two-messages" role="tab"
-                                    aria-controls="custom-tabs-two-messages" aria-selected="false">Laporan Akhir</a>
+                                <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-messages" role="tab" aria-controls="custom-tabs-two-messages" aria-selected="false">Laporan Akhir</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="custom-tabs-one-settings-tab" data-toggle="pill"
-                                    href="#custom-tabs-one-settings" role="tab"
-                                    aria-controls="custom-tabs-one-settings" aria-selected="false">Persetujuan</a>
+                                <a class="nav-link" id="custom-tabs-one-settings-tab" data-toggle="pill" href="#custom-tabs-one-settings" role="tab" aria-controls="custom-tabs-one-settings" aria-selected="false">Persetujuan</a>
                             </li>
                         </ul>
                     </div>
@@ -46,8 +34,7 @@
                     <div class="card-body">
                         <div class="tab-content" id="custom-tabs-one-tabContent">
                             <!-- Identitas -->
-                            <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel"
-                                aria-labelledby="custom-tabs-one-home-tab">
+                            <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="card bg-primary text-white">
@@ -60,28 +47,28 @@
                                                 <label class="col-sm-3 col-form-label">Judul
                                                     Penelitian</label>
                                                 <div class="col-sm-9">
-                                                    {{-- {{ $penelitian_usulanbaru->judul_penelitian }} --}}
+                                                    {{ $penelitian->judul_penelitian }}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Skema
                                                     Penelitian</label>
                                                 <div class="col-sm-9">
-                                                    {{-- {{ $penelitian_usulanbaru->skema_penelitian }} --}}
+                                                    {{ $penelitian->skema_penelitian }}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Tema
                                                     Penelitian</label>
                                                 <div class="col-sm-9">
-                                                    {{-- {{ $penelitian_usulanbaru->tema_penelitian }} --}}
+                                                    {{ $penelitian->tema_penelitian }}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Topik
                                                     Penelitian</label>
                                                 <div class="col-sm-9">
-                                                    {{-- {{ $penelitian_usulanbaru->topik_penelitian }} --}}
+                                                    {{ $penelitian->topik_penelitian }}
                                                 </div>
                                             </div>
                                         </form>
@@ -97,25 +84,25 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Nama</label>
                                                 <div class="col-sm-9">
-                                                    {{ auth()->user()->nama }}
+                                                    {{ Auth::guard('dosen')->user()->nama }}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">NIDN</label>
                                                 <div class="col-sm-9">
-                                                    {{ auth()->user()->nidn }}
+                                                    {{ Auth::guard('dosen')->user()->nidn }}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Email</label>
                                                 <div class="col-sm-9">
-                                                    {{ auth()->user()->email }}
+                                                    {{ Auth::guard('dosen')->user()->email }}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Alamat</label>
                                                 <div class="col-sm-9">
-                                                    {{ auth()->user()->alamat }}
+                                                    {{ Auth::guard('dosen')->user()->alamat }}
                                                 </div>
                                             </div>
                                         </form>
@@ -133,20 +120,20 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Nama Anggota</label>
                                                 <div class="col-sm-9">
-                                                    {{-- {{ $penelitian_usulanbaru->nama_gelar1 }} --}}
+                                                    {{ $penelitian->nama_gelar1 }}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Bidang
                                                     Keahlian</label>
                                                 <div class="col-sm-9">
-                                                    {{-- {{ $penelitian_usulanbaru->bidang_keahlian1 }} --}}
+                                                    {{ $penelitian->bidang_keahlian1 }}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Tugas</label>
                                                 <div class="col-sm-9">
-                                                    {{-- {{ $penelitian_usulanbaru->tugas_penelitian1 }} --}}
+                                                    {{ $penelitian->tugas_penelitian1 }}
                                                 </div>
                                             </div>
 
@@ -157,20 +144,20 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Nama Anggota</label>
                                                 <div class="col-sm-9">
-                                                    {{-- {{ $penelitian_usulanbaru->nama_gelar2 }} --}}
+                                                    {{ $penelitian->nama_gelar2 }}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Bidang
                                                     Keahlian</label>
                                                 <div class="col-sm-9">
-                                                    {{-- {{ $penelitian_usulanbaru->bidang_keahlian2 }} --}}
+                                                    {{ $penelitian->bidang_keahlian2 }}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Tugas</label>
                                                 <div class="col-sm-9">
-                                                    {{-- {{ $penelitian_usulanbaru->tugas_penelitian2 }} --}}
+                                                    {{ $penelitian->tugas_penelitian2 }}
                                                 </div>
                                             </div>
                                         </form>
@@ -178,13 +165,11 @@
                                 </div>
                             </div>
                             <!-- Proposal & RAB -->
-                            <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel"
-                                aria-labelledby="custom-tabs-one-profile-tab">
+                            <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="tab-content" id="custom-tabs-one-tabContent">
-                                            <div class="tab-pane fade show active" id="custom-tabs-one-identitas"
-                                                role="tabpanel" aria-labelledby="custom-tabs-one-identitas-tab">
+                                            <div class="tab-pane fade show active" id="custom-tabs-one-identitas" role="tabpanel" aria-labelledby="custom-tabs-one-identitas-tab">
 
                                                 <div class="card-body">
                                                     <div class="card bg-primary text-white">
@@ -192,23 +177,19 @@
                                                             <h2 class="card-title">Proposal Usulan</h2>
                                                         </div>
                                                     </div>
-                                                    <form class="form-horizontal" method="post"
-                                                        enctype="multipart/form-data">
+                                                    <form class="form-horizontal" method="post" enctype="multipart/form-data">
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Proposal</label>
                                                             <div class="col-sm-9">
-                                                                <img src="{{ url('public/template') }}/dist/img/pdf.png"
-                                                                    alt="User Avatar" style="width: 5%"
-                                                                    class="img-box">
-                                                                <button class="btn btn-primary" {{-- href="{{ url("$penelitian_usulanbaru->dokumen") }}" --}}
-                                                                    target="_blank"> Download</button>
+                                                                <img src="{{ url('public/template') }}/dist/img/pdf.png" alt="User Avatar" style="width: 5%" class="img-box">
+                                                                <button class="btn btn-primary" href="{{ url("$penelitian->dokumen") }}" target="_blank"> Download</button>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Tanggal
                                                                 Unggah</label>
                                                             <div class="col-sm-9">
-                                                                {{-- {{ $penelitian_usulanbaru->updated_at }} --}}
+                                                                {{ $penelitian->updated_at }}
                                                             </div>
                                                         </div>
                                                     </form>
@@ -220,46 +201,39 @@
                                                             <h2 class="card-title">Rencana Anggaran Biaya</h2>
                                                         </div>
                                                     </div>
-                                                    <form class="form-horizontal" method="post"
-                                                        enctype="multipart/form-data">
+                                                    <form class="form-horizontal" method="post" enctype="multipart/form-data">
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Jumlah
                                                                 Pendanaan</label>
                                                             <div class="col-sm-9">
-                                                                <input type="text" class="form-control"
-                                                                    name="jumlah_pendanaan" value="">
+                                                                <input type="text" class="form-control" name="jumlah_pendanaan" value="">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">File RAB</label>
                                                             <div class="col-sm-9">
-                                                                <img src="{{ url('public/template') }}/dist/img/exel.png"
-                                                                    alt="User Avatar" style="width: 5%"
-                                                                    class="img-box">
+                                                                <img src="{{ url('public/template') }}/dist/img/exel.png" alt="User Avatar" style="width: 5%" class="img-box">
                                                                 <button class="btn btn-primary" target="_blank">
                                                                     Download</button>
-                                                                {{-- href="{{ url("$penelitian_usulanbaru->dokumen2") }}" --}}
+                                                                href="{{ url("$penelitian->dokumen2") }}"
                                                             </div>
                                                         </div>
                                                     </form>
                                                 </div>
                                             </div>
 
-                                            <div class="tab-pane fade" id="custom-tabs-one-substansi" role="tabpanel"
-                                                aria-labelledby="custom-tabs-one-substansi-tab">
+                                            <div class="tab-pane fade" id="custom-tabs-one-substansi" role="tabpanel" aria-labelledby="custom-tabs-one-substansi-tab">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Luaran & Capaian -->
-                            <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel"
-                                aria-labelledby="custom-tabs-one-messages-tab">
+                            <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="tab-content" id="custom-tabs-one-tabContent">
-                                            <div class="tab-pane fade show active" id="custom-tabs-one-identitas"
-                                                role="tabpanel" aria-labelledby="custom-tabs-one-identitas-tab">
+                                            <div class="tab-pane fade show active" id="custom-tabs-one-identitas" role="tabpanel" aria-labelledby="custom-tabs-one-identitas-tab">
 
                                                 <div class="card-body">
                                                     <div class="card bg-primary text-white">
@@ -269,19 +243,15 @@
                                                     </div>
                                                     <form class="form-horizontal">
                                                         <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label"
-                                                                style="color: red">Luaran Wajib</label>
+                                                            <label class="col-sm-3 col-form-label" style="color: red">Luaran Wajib</label>
                                                             <div class="col-sm-9">
-                                                                <input type="text" class="form-control"
-                                                                    name="tkt_new" value="">
+                                                                <input type="text" class="form-control" name="tkt_new" value="">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label"
-                                                                style="color: red">Luaran Tambahan</label>
+                                                            <label class="col-sm-3 col-form-label" style="color: red">Luaran Tambahan</label>
                                                             <div class="col-sm-9">
-                                                                <input type="text" class="form-control"
-                                                                    name="tkt_new" value="">
+                                                                <input type="text" class="form-control" name="tkt_new" value="">
                                                             </div>
                                                         </div>
                                                     </form>
@@ -297,46 +267,43 @@
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Nama Mitra</label>
                                                             <div class="col-sm-9">
-                                                                {{-- {{ $penelitian_usulanbaru->nama_mitra }} --}}
+                                                                {{ $penelitian->nama_mitra }}
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Bidang Mitra</label>
                                                             <div class="col-sm-9">
-                                                                {{-- {{ $penelitian_usulanbaru->bidang_mitra }} --}}
+                                                                {{ $penelitian->bidang_mitra }}
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Alamat</label>
                                                             <div class="col-sm-9">
-                                                                {{-- {{ $penelitian_usulanbaru->alamat_mitra }} --}}
+                                                                {{ $penelitian->alamat_mitra }}
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Dokumen
                                                                 Pernyataan</label>
                                                             <div class="col-sm-9">
-                                                                {{-- {{ $penelitian_usulanbaru->dokumen_mitra }} --}}
+                                                                {{ $penelitian->dokumen_mitra }}
                                                             </div>
                                                         </div>
                                                     </form>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade" id="custom-tabs-one-substansi" role="tabpanel"
-                                                aria-labelledby="custom-tabs-one-substansi-tab">
+                                            <div class="tab-pane fade" id="custom-tabs-one-substansi" role="tabpanel" aria-labelledby="custom-tabs-one-substansi-tab">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Laporan Kemajuan -->
-                            <div class="tab-pane fade show active" id="custom-tabs-two-profile" role="tabpanel"
-                                aria-labelledby="custom-tabs-two-profile-tab">
+                            <div class="tab-pane fade show active" id="custom-tabs-two-profile" role="tabpanel" aria-labelledby="custom-tabs-two-profile-tab">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="tab-content" id="custom-tabs-two-tabContent">
-                                            <div class="tab-pane fade show active" id="custom-tabs-two-identitas"
-                                                role="tabpanel" aria-labelledby="custom-tabs-two-identitas-tab">
+                                            <div class="tab-pane fade show active" id="custom-tabs-two-identitas" role="tabpanel" aria-labelledby="custom-tabs-two-identitas-tab">
 
                                                 <div class="card-body">
                                                     <div class="card bg-primary text-white">
@@ -349,9 +316,7 @@
                                                             <label class="col-sm-3 col-form-label">Laporan Kemajuan
                                                                 Kegiatan</label>
                                                             <div class="col-sm-7">
-                                                                <img src="{{ url('public/template') }}/dist/img/word.png"
-                                                                    alt="User Avatar" style="width: 5%"
-                                                                    class="img-box">
+                                                                <img src="{{ url('public/template') }}/dist/img/word.png" alt="User Avatar" style="width: 5%" class="img-box">
                                                                 <button class="btn btn-primary"> Upload</button>
                                                             </div>
                                                         </div>
@@ -370,16 +335,14 @@
                                                                 <label class="col-sm-5 col-form-label">Nama
                                                                     Dokumen</label>
                                                                 <div class="col-sm-9">
-                                                                    <input type="text" class="form-control"
-                                                                        name="" value="">
+                                                                    <input type="text" class="form-control" name="" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="col-sm-5 col-form-label">File</label>
-                                                                <input type="file" class="form-control"
-                                                                    name="" id="" accept=".pdf">
+                                                                <input type="file" class="form-control" name="" id="" accept=".pdf">
                                                             </div>
                                                         </div>
                                                     </form>
@@ -396,21 +359,18 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-pane fade" id="custom-tabs-two-substansi" role="tabpanel"
-                                                aria-labelledby="custom-tabs-two-substansi-tab">
+                                            <div class="tab-pane fade" id="custom-tabs-two-substansi" role="tabpanel" aria-labelledby="custom-tabs-two-substansi-tab">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Laporan Akhir -->
-                            <div class="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel"
-                                aria-labelledby="custom-tabs-two-messages-tab">
+                            <div class="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel" aria-labelledby="custom-tabs-two-messages-tab">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="tab-content" id="custom-tabs-two-tabContent">
-                                            <div class="tab-pane fade show active" id="custom-tabs-two-identitas"
-                                                role="tabpanel" aria-labelledby="custom-tabs-two-identitas-tab">
+                                            <div class="tab-pane fade show active" id="custom-tabs-two-identitas" role="tabpanel" aria-labelledby="custom-tabs-two-identitas-tab">
 
                                                 <div class="card-body">
                                                     <div class="card bg-primary text-white">
@@ -423,9 +383,7 @@
                                                             <label class="col-sm-3 col-form-label">Laporan Kemajuan
                                                                 Kegiatan</label>
                                                             <div class="col-sm-7">
-                                                                <img src="{{ url('public/template') }}/dist/img/word.png"
-                                                                    alt="User Avatar" style="width: 5%"
-                                                                    class="img-box">
+                                                                <img src="{{ url('public/template') }}/dist/img/word.png" alt="User Avatar" style="width: 5%" class="img-box">
                                                                 <button class="btn btn-primary"> Upload</button>
                                                             </div>
                                                         </div>
@@ -433,9 +391,7 @@
                                                             <label class="col-sm-3 col-form-label">Laporan Kemajuan
                                                                 Keuangan</label>
                                                             <div class="col-sm-7">
-                                                                <img src="{{ url('public/template') }}/dist/img/word.png"
-                                                                    alt="User Avatar" style="width: 5%"
-                                                                    class="img-box">
+                                                                <img src="{{ url('public/template') }}/dist/img/word.png" alt="User Avatar" style="width: 5%" class="img-box">
                                                                 <button class="btn btn-primary"> Upload</button>
                                                             </div>
                                                         </div>
@@ -455,8 +411,7 @@
                                                                     <label class="col-sm-5 col-form-label">Nama
                                                                         Dokumen</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="text" class="form-control"
-                                                                            name="" value="">
+                                                                        <input type="text" class="form-control" name="" value="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -464,9 +419,7 @@
                                                                 <div class="form-group row">
                                                                     <label class="col-sm-5 col-form-label">File</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="file" class="form-control"
-                                                                            name="" id=""
-                                                                            accept=".pdf">
+                                                                        <input type="file" class="form-control" name="" id="" accept=".pdf">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -475,8 +428,7 @@
                                                                     <label class="col-sm-5 col-form-label">Jenis
                                                                         Laporan</label>
                                                                     <div class="col-sm-9">
-                                                                        <select name="" id=""
-                                                                            class="form-control" onchange="">
+                                                                        <select name="" id="" class="form-control" onchange="">
                                                                             <option value="">-- Pilih Jenis
                                                                                 Laporan
                                                                                 --
@@ -490,16 +442,14 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-pane fade" id="custom-tabs-two-substansi" role="tabpanel"
-                                                aria-labelledby="custom-tabs-two-substansi-tab">
+                                            <div class="tab-pane fade" id="custom-tabs-two-substansi" role="tabpanel" aria-labelledby="custom-tabs-two-substansi-tab">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Persetujuan -->
-                            <div class="tab-pane fade" id="custom-tabs-one-settings" role="tabpanel"
-                                aria-labelledby="custom-tabs-one-settings-tab">
+                            <div class="tab-pane fade" id="custom-tabs-one-settings" role="tabpanel" aria-labelledby="custom-tabs-one-settings-tab">
                                 <div class="card-body">
                                     <div class="card bg-primary text-white">
                                         <div class="card-header">
@@ -510,8 +460,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-5 col-form-label">Status</label>
                                             <div class="col-sm-8">
-                                                <select name="" id="" class="form-control"
-                                                    onchange="">
+                                                <select name="" id="" class="form-control" onchange="">
                                                     <option value="">-- Pilih Status Pengajuan --</option>
                                                     <option>Di Danai</option>
                                                     <option>Tidak DI Danai</option>
