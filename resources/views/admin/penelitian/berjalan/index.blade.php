@@ -20,26 +20,29 @@
                                 <th>TANGGAL PENGAJUAN</th>
                             </thead>
                             @php
-                            $no = 1;
+                                $no = 1;
                             @endphp
                             <tbody>
                                 @foreach ($list_penelitian as $penelitian)
-                                @if ($penelitian->status == 2)
-                                <tr>
-                                    <td>{{ $no++ }}</td>
-                                    <td>
-                                        <div class="btn-group">
-                                            <a href="{{ url('admin/penelitian-berjalan', $penelitian->id) }}" class="btn btn-info"><i class="fas fa-eye"></i> Lihat</a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="btn btn-success" for="">Didanai</div>
-                                    </td>
-                                    <td>{{ $penelitian->pegawai->nama }}</td>
-                                    <td>{{ $penelitian->judul_penelitian }}</td>
-                                    <td>{{ $penelitian->created_at }}</td>
-                                </tr>
-                                @endif
+                                    <tr>
+                                        <td>{{ $no++ }}</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="{{ url('admin/penelitian-berjalan', $penelitian->id) }}"
+                                                    class="btn btn-info"><i class="fas fa-eye"></i> Lihat</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            @if ($penelitian->status == 3)
+                                                <div class="btn btn-success" for="">Tidak Didanai</div>
+                                            @elseif ($penelitian->status == 2)
+                                                <div class="btn btn-success" for="">Didanai</div>
+                                            @endif
+                                        </td>
+                                        <td>{{ $penelitian->pegawai->nama }}</td>
+                                        <td>{{ $penelitian->judul_penelitian }}</td>
+                                        <td>{{ $penelitian->created_at }}</td>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>

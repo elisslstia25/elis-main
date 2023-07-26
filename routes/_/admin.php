@@ -10,15 +10,15 @@ use App\Http\Controllers\Admin\SelesaiController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'auth:admin'], function () {
-    Route::prefix('admin')->group(function() {
+    Route::prefix('admin')->group(function () {
 
         Route::get('/', [AdminController::class, 'dashboard']);
         Route::resource('admin', AdminController::class);
         Route::resource('pegawai', PegawaiController::class);
 
+        Route::get('penelitian', [PenelitianController::class, 'index']);
+        Route::get('penelitian/{penelitian}', [PenelitianController::class, 'show']);
 
-        Route::get('penelitian', [PenelitianController::class,'index']);
-        Route::get('penelitian/{penelitian}', [PenelitianController::class,'show']);
         Route::put('penelitian/update-status/{penelitian}', [PenelitianController::class, 'status']);
 
         Route::get('penelitian-berjalan', [BerjalanController::class, 'index']);
@@ -30,8 +30,8 @@ Route::group(['middleware' => 'auth:admin'], function () {
 
 
 
-        Route::get('pengabdian', [PengabdianController::class,'index']);
-        Route::get('pengabdian/{pengabdian}', [PengabdianController::class,'show']);
+        Route::get('pengabdian', [PengabdianController::class, 'index']);
+        Route::get('pengabdian/{pengabdian}', [PengabdianController::class, 'show']);
         Route::put('pengabdian/update-status/{pengabdian}', [PengabdianController::class, 'status']);
 
         Route::get('pengabdian-berjalan', [BerjalanController::class, 'index']);
@@ -39,9 +39,5 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('pengabdian-selesai', [BerjalanController::class, 'index']);
 
         Route::get('pengabdian-riwayat', [BerjalanController::class, 'index']);
-
-
+    });
 });
-
-});
-

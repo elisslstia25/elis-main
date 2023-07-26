@@ -10,8 +10,7 @@
                         Form Usulan Penelitian
                     </h3>
                 </div>
-                <form action="{{ url('admin/penelitian') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
+
                     <div class="card-body">
                         <div class="row">
 
@@ -42,7 +41,7 @@
                                         <div class="tab-content" id="custom-tabs-one-tabContent">
                                             <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
                                                 <div class="card-body">
-                                                    <input type="text" name="id_pegawai" class="form-control" value="{{ Auth::guard('dosen')->user()->id }}" hidden>
+                                                    {{-- <input type="text" name="id_pegawai" class="form-control" value="{{ Auth::guard('dosen')->user()->id }}" hidden> --}}
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -283,7 +282,7 @@
 
                                                         <form class="form-horizontal" action="{{ url('admin/penelitian/update-status', $penelitian->id) }}" method="post">
                                                             @csrf
-                                                            @method('put')
+                                                            @method('PUT')
                                                             <div class="form-group row">
                                                                 <label class="col-sm-5 col-form-label">Status</label>
                                                                 <div class="col-sm-8">
@@ -300,6 +299,7 @@
                                                             <button class="btn btn-success float-right mb-3"><i class="fa fa-save"></i>
                                                                 Simpan </button>
                                                         </form>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -310,7 +310,7 @@
 
                         </div>
                     </div>
-                </form>
+
             </div>
         </div>
     </div>
