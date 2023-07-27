@@ -51,7 +51,6 @@
             </div>
         </div>
     </div>
-{{-- qq --}}
 
     <!-- <div class="container">
         <div class="card mt-3 pt-3">
