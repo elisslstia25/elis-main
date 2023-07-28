@@ -22,8 +22,8 @@
                             $no = 1;
                             @endphp
                             <tbody>
-                                @foreach ($list_penelitian as $penelitian)
-
+                                @foreach ($list_selesai as $penelitian)
+                                @if ($penelitian->status == 2)
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>
@@ -38,7 +38,7 @@
                                     <td>{{ $penelitian->judul_penelitian }}</td>
                                     <td>{{ $penelitian->created_at }}</td>
                                 </tr>
-
+                                @endif
                                 @endforeach
                             </tbody>
                         </table>
