@@ -13,8 +13,8 @@ class SelesaiController extends Controller
      */
     public function index()
     {
-        $data['list_penelitian'] = Penelitian::all();
-        return view('admin.penelitian.berjalan.index', $data);
+        $data['list_selesai'] = Penelitian::all();
+        return view('admin.penelitian.selesai.index', $data);
     }
 
     /**

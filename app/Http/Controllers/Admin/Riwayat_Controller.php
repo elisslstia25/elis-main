@@ -3,18 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Penelitian;
+use App\Models\Pengabdian;
 use Illuminate\Http\Request;
 
-class RiwayatController extends Controller
+class Riwayat_Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data['list_penelitian'] = Penelitian::all();
-        return view('admin.penelitian.riwayat.index', $data);
+        $data['list_riwayat'] = Pengabdian::where('status', '2')->get();
+        return view('admin.pengabdian.riwayat.index', $data);
     }
 
     /**

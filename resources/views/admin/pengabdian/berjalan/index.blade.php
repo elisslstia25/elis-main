@@ -23,7 +23,7 @@
                             $no = 1;
                             @endphp
                             <tbody>
-                                @foreach ($list_pengabdian as $pengabdian)
+                                @foreach ($list_berjalan as $pengabdian)
                                 @if ($penelitian->status == 2)
                                 <tr>
                                     <td>{{ $no++ }}</td>
