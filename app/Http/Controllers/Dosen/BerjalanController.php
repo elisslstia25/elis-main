@@ -13,29 +13,9 @@ class BerjalanController extends Controller
      */
     public function index()
     {
-        $data['list_penelitian'] = Penelitian::where('status', '2')->get();
+        $data['list_berjalan'] = Penelitian::where('status', '2')->get();
         return view('dosen.penelitian.berjalan.index', $data);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
 
      public function show(Penelitian $penelitian)
     {

@@ -29,7 +29,7 @@ class PenelitianController extends Controller
         $penelitian->save();
         if (request('status') == 2) {
             return redirect('admin/penelitian-berjalan')->with('success', 'Data Didanai');
-        } elseif (request('status') == 3) {
+        } elseif (request('status') == 4) {
             return redirect('admin/penelitian-riwayat')->with('success', 'Data Tidak Didanai');
         }
     }

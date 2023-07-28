@@ -9,7 +9,7 @@
                         Form Penelitian Aktif
                     </h3>
                 </div>
-                <form action="dosen/penelitian/berjalan" method="POST" enctype="multipart/form-data">
+                <form action="dosen/penelitian-berjalan" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <div class="row">

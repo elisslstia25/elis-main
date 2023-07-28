@@ -24,7 +24,7 @@
                             $no = 1;
                             @endphp
                             <tbody>
-                                @foreach ($list_penelitian as $penelitian)
+                                @foreach ($list_berjalan as $penelitian)
 
                                 <tr>
                                     <td>{{ $no++ }}</td>

@@ -1,16 +1,16 @@
 <x-app>
 
-    <div class="row">
+<div class="row">
         <div class="col-md-12">
             <div class="mt-3 pt-3">
 
                 <div class="card">
                     <div class="card-header">
-                        <h1 class="card-title"> Penelitian Selesai</h1>
+                        <h1 class="card-title"> Data Penelitian Selesai</h1>
                     </div>
 
-                    <div class="card body">
-                        <table id="table1" class="table table-bordered table-striped">
+                    <div class="card-body">
+                    <table id="table1" class="table table-bordered table-striped">
                             <thead class="btn-primary">
                                 <th width="1%">NO</th>
                                 <th width="20%">AKSI</th>
@@ -24,19 +24,19 @@
                             @endphp
                             <tbody>
                                 @foreach ($list_selesai as $penelitian)
-                                @if ($penelitian->status === 2)
+                                @if ($penelitian->status === 3)
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="{{ url('admin/selesai', $penelitian->id) }}" class="btn btn-info">
+                                            <a href="{{ url('admin/penelitian-selesai', $penelitian->id) }}" class="btn btn-info">
                                                 <i class="fas fa-eye"></i> Lihat</a>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="btn btn-success" for="">Di danai</div>
                                     </td>
-                                    <td>{{ auth()->user()->nama }}</td>
+                                    <td>{{ $penelitian->pegawai->nama }}</td>
                                     <td>{{ $penelitian->judul_penelitian }}</td>
                                     <td>{{ $penelitian->created_at }}</td>
                                 </tr>

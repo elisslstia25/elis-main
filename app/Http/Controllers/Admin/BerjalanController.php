@@ -13,19 +13,10 @@ class BerjalanController extends Controller
      */
     public function index()
     {
-        $data['list_penelitian'] = Penelitian::where('status', '2')->get();
+        $data['list_berjalan'] = Penelitian::where('status', '2')->get();
         return view('admin.penelitian.berjalan.index', $data);
     }
 
-    // public function pengabdianBerjalan()
-    // {
-    //     $data['list_penelitian'] = Penelitian::where('status', '2')->get();
-    //     return view('admin.penelitian.berjalan.index', $data);
-    // }
-
-    /**
-     * Show the form for creating a new resource.
-     */
   
     public function show(Penelitian $penelitian)
     {
@@ -33,27 +24,16 @@ class BerjalanController extends Controller
        return view('admin.penelitian.berjalan.show', $data);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function status(Penelitian $penelitian)
     {
-        //
+        // dd($penelitian);
+        // $penelitian = Penelitian::find($penelitian);
+        $penelitian->status = request('status');
+        $penelitian->save();
+        if (request('status') == 3) {
+            return redirect('admin/penelitian-selesai')->with('success', 'Data Didanai');
+        } elseif (request('status') == 4) {
+            return redirect('admin/penelitian-riwayat')->with('success', 'Data Tidak Didanai');
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+}
 }

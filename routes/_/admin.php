@@ -27,9 +27,13 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('penelitian-berjalan', [BerjalanController::class, 'index']);
         Route::get('penelitian-berjalan/{penelitian}', [BerjalanController::class, 'show']);
 
+        Route::put('penelitian-berjalan/update-status/{penelitian}', [BerjalanController::class, 'status']);
+
         Route::get('penelitian-selesai', [SelesaiController::class, 'index']);
+        Route::get('penelitian-selesai/{penelitian}', [SelesaiController::class, 'show']);
 
         Route::get('penelitian-riwayat', [RiwayatController::class, 'index']);
+        
 
 
 

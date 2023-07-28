@@ -13,7 +13,7 @@ class SelesaiController extends Controller
      */
     public function index()
     {
-        $data['list_selesai'] = Penelitian::all();
+        $data['list_selesai'] = Penelitian::where('status', '3')->get();
         return view('admin.penelitian.selesai.index', $data);
     }
 
@@ -36,10 +36,12 @@ class SelesaiController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Penelitian $penelitian)
     {
-        //
+       $data['penelitian'] = $penelitian;
+       return view('admin.penelitian.selesai.show', $data);
     }
+    
 
     /**
      * Show the form for editing the specified resource.
