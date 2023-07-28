@@ -28,7 +28,7 @@
                                     <td>{{ $no++ }}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="{{ url('admin/penelitian/berjalan', $penelitian->id) }}" class="btn btn-info"><i class="fas fa-eye"></i> Lihat</a>
+                                            <a href="{{ url('admin/penelitian-selesai', $penelitian->id) }}" class="btn btn-info"><i class="fas fa-eye"></i> Lihat</a>
                                         </div>
                                     </td>
                                     <td>

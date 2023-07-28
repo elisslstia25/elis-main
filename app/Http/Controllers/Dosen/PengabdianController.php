@@ -67,7 +67,6 @@ class PengabdianController extends Controller
 
         $pengabdian->handleUploadDokumen();
         $pengabdian->handleUploadDokumen2();
-        $pengabdian->handleUploadDokumen3();
         $pengabdian->handleUploadDokumenMitra();
 
         $pengabdian->status = '1';

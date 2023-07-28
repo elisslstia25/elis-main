@@ -90,14 +90,14 @@
                                                         <div class="form-group">
                                                             <label>Judul Pengabdian</label>
                                                             <input type="text" class="form-control"
-                                                                name="judul_penelitian"
+                                                                name="judul_pengabdian"
                                                                 value="{{ Auth::guard('dosen')->user()->judul_pengabdian }}">
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label>TKT New</label>
+                                                            <label>TKT</label>
                                                             <input type="text" class="form-control" name="tkt_new"
                                                                 value="{{ Auth::guard('dosen')->user()->tkt_new }}">
                                                         </div>
@@ -109,10 +109,10 @@
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label>Skema Penelitian</label>
+                                                            <label>Skema pengabdian</label>
                                                             <input type="text" class="form-control"
-                                                                name="skema_penelitian"
-                                                                value="{{ Auth::guard('dosen')->user()->skema_penelitian }}">
+                                                                name="skema_pengabdian"
+                                                                value="{{ Auth::guard('dosen')->user()->skema_pengabdian }}">
                                                         </div>
 
                                                         <div class="form-group">
@@ -146,10 +146,10 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label>Bidang Penelitian</label>
+                                                        <label>Bidang pengabdian</label>
                                                         <input type="text" class="form-control"
-                                                            name="bidang_penelitian"
-                                                            value="{{ Auth::guard('dosen')->user()->bidang_penelitian }}">
+                                                            name="bidang_pengabdian"
+                                                            value="{{ Auth::guard('dosen')->user()->bidang_pengabdian }}">
                                                     </div>
 
 
@@ -160,17 +160,17 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label>Tema Penelitian</label>
+                                                        <label>Tema pengabdian</label>
                                                         <input type="text" class="form-control"
-                                                            name="tema_penelitian"
-                                                            value="{{ Auth::guard('dosen')->user()->tema_penelitian }}">
+                                                            name="tema_pengabdian"
+                                                            value="{{ Auth::guard('dosen')->user()->tema_pengabdian }}">
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label>Topik Penelitian</label>
+                                                        <label>Topik pengabdian</label>
                                                         <input type="text" class="form-control"
-                                                            name="topik_penelitian"
-                                                            value="{{ Auth::guard('dosen')->user()->topik_penelitian }}">
+                                                            name="topik_pengabdian"
+                                                            value="{{ Auth::guard('dosen')->user()->topik_pengabdian }}">
                                                     </div>
 
                                                     <div class="form-group">
@@ -209,10 +209,10 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label>Tugas Penelitian 1</label>
+                                                        <label>Tugas pengabdian 1</label>
                                                         <input type="text" class="form-control"
-                                                            name="tugas_penelitian1"
-                                                            value="{{ Auth::guard('dosen')->user()->tugas_penelitian1 }}">
+                                                            name="tugas_pengabdian1"
+                                                            value="{{ Auth::guard('dosen')->user()->tugas_pengabdian1 }}">
                                                     </div>
 
                                                     <div class="form-group">
@@ -254,8 +254,8 @@
                                                     <div class="form-group">
                                                         <label>Tugas Pengabdian 2</label>
                                                         <input type="text" class="form-control"
-                                                            name="tugas_penelitian2"
-                                                            value="{{ Auth::guard('dosen')->user()->tugas_penelitian2 }}">
+                                                            name="tugas_pengabdian2"
+                                                            value="{{ Auth::guard('dosen')->user()->tugas_pengabdian2 }}">
                                                     </div>
 
                                                     <div class="form-group row" style="margin-bottom: 0px;">

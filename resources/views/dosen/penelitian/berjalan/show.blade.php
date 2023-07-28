@@ -9,7 +9,7 @@
                         Form Penelitian Aktif
                     </h3>
                 </div>
-                <form action="dosen/penelitian/berjalan">
+                <form action="dosen/penelitian/berjalan" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <div class="row">
@@ -18,7 +18,7 @@
                                 <div class="card card-primary card-tabs">
                                     <div class="card-header p-0 pt-1">
                                         <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
-                                            <li class="nav-item">
+                                            {{-- <li class="nav-item">
                                                 <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Bagian I</a>
                                             </li>
                                             <li class="nav-item">
@@ -29,7 +29,7 @@
                                                 <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">Bagian
                                                     III</a>
                                             </li>
-                                            {{-- <li class="nav-item">
+                                             <li class="nav-item">
                                             <a class="nav-link" id="custom-tabs-one-settings-tab" data-toggle="pill"
                                                 href="#custom-tabs-one-settings" role="tab"
                                                 aria-controls="custom-tabs-one-settings" aria-selected="false">Bagian
@@ -86,67 +86,89 @@
                                                                     {{ auth()->user()->nidn }}
                                                                 </div>
                                                             </div>
-                                                        </div>
-
-                                                        <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label>Email</label>
                                                                 <div class="col-sm-9">
                                                                     {{ auth()->user()->email }}
                                                                 </div>
                                                             </div>
-
+    
                                                             <div class="form-group">
                                                                 <label>Alamat</label>
                                                                 <div class="col-sm-9">
                                                                     {{ auth()->user()->alamat }}
                                                                 </div>
                                                             </div>
-
-                                                            <!-- <div class="form-group">
-                                                                <label>Skema Penelitian</label>
-                                                                <div class="col-sm-9">
-                                                                <input type="text" class="form-control" name="skema_penelitian" value="{{ Auth::guard('dosen')->user()->skema_penelitian }}">
-                                                                </div>
-                                                             </div>
-
-                                                            <div class="form-group">
-                                                                <label>Rumpun Ilmu 1</label>
-                                                                <input type="text" class="form-control" name="rumpun_ilmu1" value="{{ Auth::guard('dosen')->user()->rumpun_ilmu1 }}">
-                                                            </div>
-
-                                                            <div class="form-group">
-                                                                <label>Rumpun Ilmu 2</label>
-                                                                <input type="text" class="form-control" name="rumpun_ilmu2" value="{{ Auth::guard('dosen')->user()->rumpun_ilmu2 }}">
-                                                            </div>
-
-                                                            <div class="form-group">
-                                                                <label>Rumpun Ilmu 3</label>
-                                                                <input type="text" class="form-control" name="rumpun_ilmu3" value="{{ Auth::guard('dosen')->user()->rumpun_ilmu3 }}">
-                                                            </div> -->
                                                         </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Nama Anggota 1</label>
+                                                                <div class="col-sm-9">
+                                                                    {{ $penelitian->nama_gelar1 }}
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label>Bidang Keahlian 1</label>
+                                                                <div class="col-sm-9">
+                                                                    {{ $penelitian->bidang_keahlian1 }}
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label>Peran 1</label>
+                                                                <div class="col-sm-9">
+                                                                    {{ $penelitian->peran1 }}
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label>Nama Anggota 2</label>
+                                                                <div class="col-sm-9">
+                                                                    {{ $penelitian->nama_gelar2 }}
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="form-group">
+                                                                <label>Bidang Keahlian 2</label>
+                                                                <div class="col-sm-9">
+                                                                    {{ $penelitian->bidang_keahlian2 }}
+                                                                </div>
+                                                            </div>
+            
+                                                            <div class="form-group">
+                                                                    <label>Peran 2</label>
+                                                                    <div class="col-sm-9">
+                                                                    {{ $penelitian->peran2 }}
+                                                                </div>
+                                                                </div>
+
+                                                                <div class="form-group row" style="margin-bottom: 0px;">
+                                                                    <div class="col-lg-12">
+                                                                        <label>Dokumen Kemajuan Proposal</label>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <a href="path_ke_file/dokumen_proposal.pdf" download>
+                                                                            <button type="button" class="btn btn-primary">Download</button>
+                                                                        </a>
+                                                                        <p style="color: red; font-size: 12px">*Download format diatas</p>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <input type="file" class="form-control" name="dokumen" value="{{ Auth::guard('dosen')->user()->dokumen }}" accept="application/pdf">
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        
+                                                        <div class="footer" style="margin-top: 10%">
+                                                            <!-- <button type="submit" class="btn btn-info float-center"><span class="fa fa-arrow-left"></span> Kembali</button> -->
+                                                            <button type="submit" class="btn btn-default float-right"><span class="fa fa-save"></span> Simpan</button>
+                                                        </div>
+            
+                                                    
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
-                                                <div class="row">
-                                                <div class="form-group row" style="margin-bottom: 0px;">
-                                                            <div class="col-lg-12">
-                                                                <label>Dokumen Kemajuan Proposal</label>
-                                                            </div>
-                                                            <div class="col-lg-6">
-                                                                <a href="path_ke_file/dokumen_proposal.pdf" download>
-                                                                    <button type="button" class="btn btn-primary">Download</button>
-                                                                </a>
-                                                                <p style="color: red; font-size: 12px">*Download format diatas</p>
-                                                            </div>
-                                                            <div class="col-lg-6">
-                                                                <input type="file" class="form-control" name="dokumen" value="{{ Auth::guard('dosen')->user()->dokumen }}" accept="application/pdf">
-                                                            </div>
-                                                        </div>
-
-
                                         </div>
                                     </div>
                                 </div>

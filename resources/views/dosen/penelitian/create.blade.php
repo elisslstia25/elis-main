@@ -142,7 +142,7 @@
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label>Nama Gelar</label>
+                                                            <label>Nama Anggota 1</label>
                                                             <input type="text" class="form-control" name="nama_gelar1" value="{{ Auth::guard('dosen')->user()->nama_gelar1 }}">
                                                         </div>
                                                     </div>
@@ -169,7 +169,7 @@
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label>Nama Gelar 2</label>
+                                                            <label>Nama Anggota 2</label>
                                                             <input type="text" class="form-control" name="nama_gelar2" value="{{ Auth::guard('dosen')->user()->nama_gelar2 }}">
                                                         </div>
 
@@ -261,27 +261,12 @@
                                                         </div>
 
                                                         <div class="footer" style="margin-top: 10%">
-                                                            <button type="submit" class="btn btn-info float-center"><span class="fa fa-arrow-left"></span> Kembali</button>
+                                                            <!-- <button type="submit" class="btn btn-info float-center"><span class="fa fa-arrow-left"></span> Kembali</button> -->
                                                             <button type="submit" class="btn btn-default float-right"><span class="fa fa-save"></span> Simpan</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <!-- {{--
-                                        <div class="tab-pane fade" id="custom-tabs-one-settings" role="tabpanel"
-                                            aria-labelledby="custom-tabs-one-settings-tab">
-                                            Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna,
-                                            iaculis
-                                            tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque
-                                            tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum
-                                            consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec
-                                            pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat
-                                            diam.
-                                            Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst.
-                                            Praesent imperdiet accumsan ex sit amet facilisis.
-                                        </div> --}} -->
-
                                         </div>
 
                                     </div>

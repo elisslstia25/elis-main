@@ -37,10 +37,10 @@
                                                 <div class="btn-group">
                                                     <x-button.info-button url="dosen/pengabdian"
                                                         id="{{ $pengabdian->id }}" />
-                                                    <x-button.edit-button url="dosen/pengabdian"
-                                                        id="{{ $pengabdian->id }}" />
-                                                    <x-button.delete-button url="dosen/pengabdian"
-                                                        id="{{ $pengabdian->id }}" />
+                                                        <x-button.delete-button url="dosen/pengabdian"
+                                                            id="{{ $pengabdian->id }}" />
+                                                    <!-- <x-button.edit-button url="dosen/pengabdian"
+                                                        id="{{ $pengabdian->id }}" /> -->
                                                 </div>
                                             </td>
                                             <td>
