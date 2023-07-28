@@ -23,12 +23,12 @@
                             $no = 1;
                             @endphp
                             <tbody>
-                                @foreach ($list_penelitian as $penelitian)
+                                @foreach ($list_riwayat as $penelitian)
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="{{ url('admin/penelitian/berjalan', $penelitian->id) }}" class="btn btn-info">
+                                            <a href="{{ url('admin/penelitian/riwayat', $penelitian->id) }}" class="btn btn-info">
                                                 <i class="fas fa-eye"></i> Lihat</a>
                                         </div>
                                     </td>

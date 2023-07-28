@@ -13,7 +13,7 @@ class RiwayatController extends Controller
      */
     public function index()
     {
-        $data['list_penelitian'] = Penelitian::all();
+        $data['list_riwayat'] = Penelitian::all();
         return view('admin.penelitian.riwayat.index', $data);
     }
 
