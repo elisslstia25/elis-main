@@ -20,6 +20,10 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::resource('pegawai', PegawaiController::class);
 
         Route::get('penelitian', [PenelitianController::class, 'index']);
+
+        Route::get('penelitian/tema-add', [PenelitianController::class, 'tema']);
+        Route::post('penelitian/tema-add', [PenelitianController::class, 'temaPost']);
+
         Route::get('penelitian/{penelitian}', [PenelitianController::class, 'show']);
 
         Route::put('penelitian/update-status/{penelitian}', [PenelitianController::class, 'status']);
@@ -33,7 +37,7 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('penelitian-selesai/{penelitian}', [SelesaiController::class, 'show']);
 
         Route::get('penelitian-riwayat', [RiwayatController::class, 'index']);
-        
+
 
 
 

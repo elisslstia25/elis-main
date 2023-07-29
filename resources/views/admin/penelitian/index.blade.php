@@ -7,6 +7,9 @@
                 <div class="card">
                     <div class="card-header">
                         <h1 class="card-title"> Data Penelitian Usulan Baru</h1>
+                        <a href="{{ url('admin/penelitian/tema-add') }}" class="btn btn-dark float-right">
+                            <i class="fa fa-plus"></i> Tambah Tema Penelitian
+                        </a>
                     </div>
 
                     <div class="card-body">
@@ -20,27 +23,28 @@
                                 <th>TANGGAL PENGAJUAN</th>
                             </thead>
                             @php
-                            $no = 1;
+                                $no = 1;
                             @endphp
                             <tbody>
                                 @foreach ($list_penelitian as $penelitian)
-                                @if ($penelitian->status == 1)
-                                <tr>
-                                    <td>{{ $no++ }}</td>
-                                    <td>
-                                        <div class="btn-group">
-                                            <a href="{{ url('admin/penelitian', $penelitian->id) }}" class="btn btn-info">
-                                                <i class="fas fa-eye"></i> Lihat</a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="btn btn-warning" for="">Belum Didanai</div>
-                                    </td>
-                                    <td>{{ $penelitian->pegawai->nama }}</td>
-                                    <td>{{ $penelitian->judul_penelitian }}</td>
-                                    <td>{{ $penelitian->created_at }}</td>
-                                </tr>
-                                @endif
+                                    @if ($penelitian->status == 1)
+                                        <tr>
+                                            <td>{{ $no++ }}</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="{{ url('admin/penelitian', $penelitian->id) }}"
+                                                        class="btn btn-info">
+                                                        <i class="fas fa-eye"></i> Lihat</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-warning" for="">Belum Didanai</div>
+                                            </td>
+                                            <td>{{ $penelitian->pegawai->nama }}</td>
+                                            <td>{{ $penelitian->judul_penelitian }}</td>
+                                            <td>{{ $penelitian->created_at }}</td>
+                                        </tr>
+                                    @endif
                                 @endforeach
                             </tbody>
                         </table>

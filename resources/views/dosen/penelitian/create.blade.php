@@ -128,7 +128,7 @@
 
                                                         <div class="form-group">
                                                             <label>Tema Penelitian</label>
-                                                            <input type="text" class="form-control" name="tema_penelitian" value="{{ Auth::guard('dosen')->user()->tema_penelitian }}">
+                                                            <input type="text" class="form-control" name="tema_penelitian" readonly placeholder="di tentukan oleh admin">
                                                         </div>
 
                                                         <div class="form-group">

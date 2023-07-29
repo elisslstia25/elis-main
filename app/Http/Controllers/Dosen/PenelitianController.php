@@ -43,7 +43,7 @@ class PenelitianController extends Controller
         $penelitian->rumpun_ilmu3           = request('rumpun_ilmu3');
         $penelitian->bidang_penelitian      = request('bidang_penelitian');
         $penelitian->bidang_prn             = request('bidang_prn');
-        $penelitian->tema_penelitian        = request('tema_penelitian');
+        // $penelitian->tema_penelitian        = request('tema_penelitian');
         $penelitian->topik_penelitian       = request('topik_penelitian');
         $penelitian->lama_kegiatan          = request('lama_kegiatan');
         $penelitian->nama_gelar1            = request('nama_gelar1');
@@ -82,7 +82,7 @@ class PenelitianController extends Controller
     {
     }
 
-   
+
 
 
     /**
