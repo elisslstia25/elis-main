@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\PengumumanController;
 use App\Http\Controllers\AuthController;
 
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,4 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 include "_/admin.php";
 include "_/dosen.php";
 
+Route::get('/', [PengumumanController::class, 'home']);

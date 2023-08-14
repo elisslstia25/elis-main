@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- My Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{{ url('landing') }}/style.css">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- My Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
+    <title>SIP3KM</title>
+</head>
+
+<body data-spy="scroll" data-target="#navScroll">
+    <div class="container-xxl bg-white p-0">
+        <!-- Awal Nafbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#section-home">SIP3KM</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navScroll">
+                    <ul class="navbar-nav ml-auto">
+                        </li>
+                        <a class="nav-link" href="#section-announcement">Announcement</a>
+                        <a class="nav-link" href="#section-login">Login</a>
+                        <!-- <a class="nav-link" href="#section-team">Team</a> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Akhir Navbar -->
+
+
+        <!-- Jumbotron Awal -->
+        <section id="section-home">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <br><br><br>
+                    <h1>WELCOME TO SIP3KM</h1>
+                    <div class="separator"></div>
+                    <p>Sistem Informasi Pusat Penelitian Dan Pengabdian Kepada Masyarakat Politeknik Negeri Ketapang
+                    </p><br><br>
+
+                    <!-- <h1 class="display-4">Sistem Informasi Pusat <span>Penelitian </span text-center>Dan <br><span> Pengabdian  Kepada Masyarakat</span> </h1><br><br> -->
+
+                </div>
+            </div>
+        </section>
+        <!-- Jumbotron Akhir -->
+
+        <!-- Container Awal -->
+        <div class="container">
+            <section id="section-fullstack">
+                <br>
+                <div class="col-lg-12">
+                    <div class="container">
+                        <div class="row" id="section-announcement">
+                            <div class="col  utama"><br>
+                                <h1 class="text-center" style="border-bottom: 3px solid rgb(6, 135, 255) ;">Announcement</h1>
+                                @foreach ($list_data as $item)
+                                    <p class="text-justify">{{ $item->pengumuman }}</p>
+                                    <span>Tanggal : {{ $item->created_at->format('F j, Y, g:i a') }}</span>
+                                    <hr>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- fitur -->
+            <!-- <section id="section-feature"></section>
+      <div class="container-xxl py-6">
+        <div class="container">
+          <h1 style="text-align: center ; border-bottom: 3px solid blue;">Fitur Yang Terdapat Pada Website / Aplikasi</h1><br><br> -->
+            <!-- <p class="mb-4">Di dalam sistem ini terdapat beberapa fitur yang memumdahkan pengguna dalam melakukan Upload data atau laporan yaitu :</p> -->
+            <!-- <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s"><br>
+                    <img class="img-fluid rounded" src="img/screen/fitur2.png">
+                </div>
+                <div class="col wow fadeInUp" data-wow-delay="0.5s">
+
+
+                    <ul class="process mb-0">
+                        <li>
+                            <span><i class="fa fa-address-card"></i></span>
+                            <div>
+                                <h5>Profil</h5>
+                                <p>Di dalam menu profil user atau admin bisa mengubah data diri yang telah di tambahkan sebelumnya </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-cog"></i></span>
+                            <div>
+                                <h5>Penelitian</h5>
+                                <p>Di dalam menu Penelitian terdapat beberapa sub menu diantaranya Usulan baru, Penelitian aktif, Penelitian selesai, dan Riwayat usulan .</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-check"></i></span>
+                            <div>
+                                <h5>Pengabdian</h5>
+                                <p>Di dalam menu Pengabdian terdapat beberapa sub menu diantaranya Usulan baru, Pengabdian aktif, Pengabdian selesai, dan Riwayat usulan</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+            <!--fitur end  -->
+
+            <!-- <section id="section-galeri"><br>
+        <div class="container">
+          <div class="col text-center">
+          <h1 style="border-bottom: 3px solid blue;" di>GALERI</h1>
+        </div><br><br>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="img/screen/login.png" alt="second slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/screen/dashboard admin.jpeg" alt="Second slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/screen/dashboard dosen.jpeg" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/screen/profil dosen.jpeg" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/screen/usulanbaru.png" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/screen/penelitianaktif.png" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/screen/penelitianselesai.png" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/screen/riwayatpenelitian.png" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/screen/datamodule.png" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class=""></span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class=""></span>
+          </a>
+        </div>
+      </div>
+    </section> -->
+            <!-- GALERI END -->
+
+            <!-- ID CARD  -->
+            <!-- <section class="section-testimonial" id="section-team">
+    <div class="row justify-content-center">
+       <div class="col">
+         <h1 style="text-align: center; border-bottom: 3px solid blue ;" > DEVELOPMENT TEAM</h1>
+       </div>
+    </div>
+
+<br>
+      <div class="row">
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="img/team/kakelis1.JPG" alt="Card image cap">
+                <div class="card-body">
+                  <h4>ELIS SULISTIA .S</h4>
+                  <p class="card-text">Mahasiswa Teknologi Informasi Semester IV</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="img/team/kakartha1.JPG" alt="Card image cap">
+                <div class="card-body">
+                  <h4>ARTHA SUKMA .A</h4>
+                  <p class="card-text">Mahasiswa Teknologi Informasi Semester IV </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+          <div class="card">
+              <img class="card-img-top" src="img/team/kakdian1.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h4>HERDIANTI .N</h4>
+                <p class="card-text">Mahasiswa Teknologi Informasi Semester IV </p>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card">
+            <img class="card-img-top" src="img/team/kakdati1.jpeg" alt="Card image cap">
+            <div class="card-body">
+              <h4>DATI</h4>
+              <p class="card-text">Mahasiswa Teknologi Informasi Semester IV </p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  <br>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="col-sm-50">
+          <img class="card-img-top" src="img/team/irna1.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h4>IRNAWATI</h4>
+            <p class="card-text">Mahasiswa Teknologi Informasi Semester II </p>
+          </div>
+        </div>
+      </div>
+  </div>
+    <div class="col">
+        <div class="card" >
+            <img class="card-img-top" src="img/team/irsyad1.jpeg" alt="Card image cap">
+            <div class="card-body">
+              <h4>IRSYAD HUSAIN .J</h4>
+              <p class="card-text">Mahasiswa Teknologi Informasi Semester II </p>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+          <div class="card" >
+              <img class="card-img-top" src="img/team/akmal1.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h4>AKMAL ALFARIZI</h4>
+                <p class="card-text">Mahasiswa Teknologi Informasi Semester II </p>
+              </div>
+          </div>
+          </div>
+        <div class="col">
+          <div class="card">
+              <img class="card-img-top" src="img/team/ali.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h4>ABDULLAH ALI</h4>
+                <p class="card-text">Mahasiswa Teknologi Informasi Semester II </p>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section> -->
+            <!-- END ID CARD -->
+
+
+
+            </section>
+
+
+
+        </div>
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col">
+                        <h5 class="text-white mb-4">Hubungi Kami</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> JL Rangge Sentap, Dalong,
+                            Sukaharja, Kec. Delta Pawan, Kabupaten Ketapang, Kalimantan Barat 78813</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i> 0534 - 3030 686</p>
+                        <p class="mb"><i class="fa fa-envelope me-3"></i> informatika@politap.ac.id</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://id-id.facebook.com/poliketapang/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://www.youtube.com/c/PolitapOfficial/featured"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://instagram.com/politekniknegeriketapang?igshid=YmMyMTA2M2Y="><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h5 class="text-white mb-4">Tautan Langsung</h5>
+                        <a class="btn btn-link text-white-50" href="#section-about">Announcement</a>
+                        <!-- <a class="btn btn-link text-white-50" href="#section-feature">Features</a>
+                <a class="btn btn-link text-white-50" href="#section-galeri">Gallery</a>
+                <a class="btn btn-link text-white-50" href="#section-home">home</a>
+                <a class="btn btn-link text-white-50" href="#section-team">Team Development</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col">
+                            &copy; <a class="border-bottom" href="#">SIP3KM</a>, All Right Reserved.
+                            <a class="border-bottom"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    <!-- Footer End -->
+    <!-- Container Akhir -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"
+        integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ url('landing') }}/script.js"></script>
+</body>
+
+</html>

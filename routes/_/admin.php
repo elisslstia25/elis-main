@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BerjalanController;
 use App\Http\Controllers\Admin\PegawaiController;
 use App\Http\Controllers\Admin\PenelitianController;
 use App\Http\Controllers\Admin\PengabdianController;
+use App\Http\Controllers\Admin\PengumumanController;
 use App\Http\Controllers\Admin\Riwayat_Controller;
 use App\Http\Controllers\Admin\RiwayatController;
 use App\Http\Controllers\Admin\Selesai_Controller;
@@ -50,5 +51,9 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('pengabdian-selesai', [Selesai_Controller::class, 'index']);
 
         Route::get('pengabdian-riwayat', [Riwayat_Controller::class, 'index']);
+
+        Route::get('pengumuman', [PengumumanController::class, 'index']);
+        Route::get('pengumuman/create', [PengumumanController::class, 'create']);
+        Route::post('pengumuman', [PengumumanController::class, 'store']);
     });
 });
